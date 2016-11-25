@@ -34,6 +34,12 @@
             <div class="row">
                 <div class="col-sm-8">
                     <article>
+                        <div>
+                            <input class="form-control" type="search" id="search" placeholder="search contributors" />
+                        </div>
+                    </article>
+                    <br />
+                    <article>
                         <div class="media" id="mymedia"></div><!-- media -->
                     </article>
                 </div>

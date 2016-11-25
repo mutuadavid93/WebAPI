@@ -8,7 +8,6 @@ $(function () {
    $.getJSON(url, function (data) {
         //The First Element selected by Default
         
-        
         //-------------------------------------------------------------
         $.getJSON(data[0].url, function (first_obj) {
             var obj = first_obj;
@@ -56,11 +55,13 @@ $(function () {
                     "background" : "#105b63",
                     "color" : "#ffd34e"
                 });
-                console.info(result.login);
+                
             });//getJSON person
             
           });//click
           
        }); //Loop
+       
+       
    });//getJSON
 });//document ready
