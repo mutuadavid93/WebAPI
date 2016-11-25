@@ -14,6 +14,8 @@
                 color: #fffad5;
             }
             
+            span.lead:not(:first-child) { color: #fffad5; }
+            
             .media-heading { color: #ffd34e; }
             
             #mymedia .realimage {
@@ -30,9 +32,15 @@
        
         <section class="container">
             <div class="row">
-                <div class="col-sm-6 col-sm-offset-3">
+                <div class="col-sm-8">
                     <article>
                         <div class="media" id="mymedia"></div><!-- media -->
+                    </article>
+                </div>
+                <div class="col-sm-4">
+                    <article>
+                        <div id="landing" class="well">
+                        </div><!-- panel-default -->
                     </article>
                 </div>
             </div>
