@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Web API</title>
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/animate.min.css" rel="stylesheet" type="text/css"/>
         <style type="text/css">
             .firstperson { 
                 border: 2px solid gray; 
@@ -35,7 +36,7 @@
                 <div class="col-sm-8">
                     <article>
                         <div>
-                            <input class="form-control" type="search" id="search" placeholder="search contributors" />
+                            <input autocomplete="off" class="form-control" type="search" id="search" placeholder="search contributors" />
                         </div>
                     </article>
                     <br />
