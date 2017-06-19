@@ -3,7 +3,7 @@
  */
 $(function () {
    //The Resource URL
-   var url = "https://api.github.com/repos/knockout/knockout/contributors";
+   var url = "https://api.github.com/repos/angular/angular/contributors";
    
    //By Default load all items.
    //-----------------------------------------------------------------------
@@ -48,7 +48,7 @@ $(function () {
       var myExp = new RegExp(found, "i");
       
       $.getJSON(url, function (data) {
-       var output = '<div class="animated bounceInLeft" -webkit-animation-delay="4s" -webkit-animation-duration="10s">';   
+       var output = '<div id="makeitwork" class="animated bounceInLeft" -webkit-animation-delay="4s" -webkit-animation-duration="10s">';   
        $.each(data, function (index, item) {
            if(item.login.search(myExp) !== -1) {
                var contrib = "contribution";
@@ -65,6 +65,26 @@ $(function () {
       });//getJSON
       
    });//Keyup Event
+   
+   /***************************************************
+    *      ONCLICK OF EACH USER BIO
+    ***************************************************/
+   
+    $('#mymedia').on('click', 'div.details', function () {
+          $.getJSON($(this).attr('stuff'), function (obj) {
+              console.log(obj);
+               var region = "<div><img class='img-rounded img-responsive' src="+obj.avatar_url+" />"+
+                         '<p class="lead"><span>Name: '+obj.name.toUpperCase()+'</span><br />'+
+                         '<span class="lead">Repos: '+obj.public_repos+'</span><br />'+
+                         '<span class="lead">Gists: '+obj.public_gists+'</span></p>'+
+                     "</div>";
+             
+               $('#landing').html(region).css({
+                    "background" : "#105b63",
+                    "color" : "#ffd34e"
+               });
+          });
+      }); //div.details
    
    //-------------------------------------------------------------
     $('#mymedia div.animated .details').click(function (event) {
